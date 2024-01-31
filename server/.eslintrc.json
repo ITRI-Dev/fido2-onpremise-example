@@ -1,0 +1,35 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": ["eslint:recommended"],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "rules": {
+    "indent": [
+      "error",
+      "tab",
+      {
+        "SwitchCase": 1,
+        "MemberExpression": 0
+      }
+    ],
+    "no-tabs": 0,
+    "no-console": "error",
+    "comma-dangle": ["error", "never"],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "double"],
+    "semi": ["error"],
+    "brace-style": ["error"],
+    "array-bracket-newline": "off",
+    "array-bracket-spacing": ["error", "never"],
+    "no-mixed-spaces-and-tabs": 0,
+    "eol-last": ["error", "never"]
+  }
+}
