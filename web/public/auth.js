@@ -1,4 +1,4 @@
-const FIDO2_SERVER = "${FIDO2_SERVER}";
+const FIDO2_SERVER = ""; // https://admin-auth.ofido.tw
 const API_SERVER = "";
 
 const bufferDecode = (value) => {
