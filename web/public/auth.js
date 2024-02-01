@@ -78,9 +78,8 @@ const login = async () => {
       }
     }).then(res => res.json());
 
-    console.log(data);
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 };
 
@@ -149,6 +148,6 @@ const register = async () => {
       ).then((res) => res.json());
     }
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 };

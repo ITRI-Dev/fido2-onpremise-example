@@ -3,13 +3,14 @@ import express from 'express'
 import fetch from "node-fetch";
 
 const { KET, TOKEN } = process.env;
+const FIDO2_SERVER = ""; // https://admin-auth.ofido.tw
 const app = express();
 
 app.post("/register", async (req, res) => {
   try {
     const { email } = req.body;
 
-    const { data: user } = await fetch(`https://admin-auth.ofido.tw/api/tenant/${KEY}/user`, {
+    const { data: user } = await fetch(`${FIDO2_SERVER}/api/tenant/${KEY}/user`, {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -22,7 +23,7 @@ app.post("/register", async (req, res) => {
       })
     }).then((res) => res.json());
 
-    const { data: token } = await fetch(`https://admin-auth.ofido.tw/api/tenant/${KEY}/user/${user.id}/token`, {
+    const { data: token } = await fetch(`${FIDO2_SERVER}/api/tenant/${KEY}/user/${user.id}/token`, {
       method: "POST",
       headers: {
         Accept: "application/json",
